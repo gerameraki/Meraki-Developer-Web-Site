@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  image: string;
+  slug: string;
+  tags?: string[];
+}
+
+const { title, excerpt, date, author, image, slug, tags = [] } = Astro.props;
+
+// Format date
+const formattedDate = new Date(date).toLocaleDateString('es-MX', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<article class="blog-card group">
+  <a href={`/blog/${slug}`} class="block">
+    <div class="relative h-48 overflow-hidden">
+      <img 
+        src={image} 
+        alt={title} 
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+  </a>
+  <div class="p-6">
+    <div class="flex flex-wrap gap-2 mb-3">
+      {tags.map((tag) => (
+        <a href={`/blog/tag/${tag.toLowerCase()}`} class="text-xs px-2 py-1 bg-primary-100 text-primary-700 rounded-full hover:bg-primary-200 transition-colors">
+          {tag}
+        </a>
+      ))}
+    </div>
+    <h3 class="text-xl font-bold mb-2 group-hover:text-primary-600 transition-colors">
+      <a href={`/blog/${slug}`}>{title}</a>
+    </h3>
+    <p class="text-slate-600 mb-4">{excerpt}</p>
+    <div class="flex items-center justify-between text-sm text-slate-500">
+      <span>{author}</span>
+      <time datetime={date}>{formattedDate}</time>
+    </div>
+  </div>
+</article>

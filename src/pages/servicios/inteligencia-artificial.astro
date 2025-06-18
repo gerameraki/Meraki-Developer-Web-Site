@@ -1,0 +1,251 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import CtaSection from '../../components/CtaSection.astro';
+
+const metaDescription = "Soluciones de Inteligencia Artificial para empresas en California. Automatización inteligente, chatbots, análisis predictivo y más para optimizar tu negocio.";
+
+const benefits = [
+  {
+    title: "Automatización Inteligente",
+    description: "Optimiza procesos repetitivos y reduce errores con sistemas que aprenden y mejoran continuamente.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>'
+  },
+  {
+    title: "Asistentes Virtuales",
+    description: "Chatbots y asistentes AI que proporcionan atención al cliente 24/7 y mejoran la experiencia del usuario.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>'
+  },
+  {
+    title: "Análisis Predictivo",
+    description: "Anticipa tendencias y comportamientos para tomar decisiones estratégicas basadas en datos.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>'
+  },
+  {
+    title: "Personalización Avanzada",
+    description: "Ofrece experiencias únicas a cada usuario basadas en su comportamiento e interacciones.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>'
+  }
+];
+
+const solutions = [
+  {
+    title: "Chatbots Inteligentes",
+    description: "Asistentes virtuales que aprenden y mejoran con cada interacción.",
+    features: [
+      "Atención 24/7",
+      "Respuestas personalizadas",
+      "Integración con CRM",
+      "Múltiples idiomas"
+    ]
+  },
+  {
+    title: "Procesamiento de Lenguaje",
+    description: "Análisis y generación de texto para múltiples aplicaciones.",
+    features: [
+      "Análisis de sentimientos",
+      "Generación de contenido",
+      "Clasificación de documentos",
+      "Traducción automática"
+    ]
+  },
+  {
+    title: "Visión por Computadora",
+    description: "Sistemas que pueden ver, analizar y procesar imágenes.",
+    features: [
+      "Reconocimiento de objetos",
+      "Control de calidad",
+      "Análisis de documentos",
+      "Seguridad y vigilancia"
+    ]
+  }
+];
+
+const industries = [
+  {
+    name: "Retail",
+    applications: [
+      "Recomendaciones personalizadas",
+      "Predicción de inventario",
+      "Análisis de comportamiento",
+      "Optimización de precios"
+    ]
+  },
+  {
+    name: "Servicios Profesionales",
+    applications: [
+      "Automatización de procesos",
+      "Asistentes virtuales",
+      "Análisis de documentos",
+      "Gestión de casos"
+    ]
+  },
+  {
+    name: "Manufactura",
+    applications: [
+      "Control de calidad",
+      "Mantenimiento predictivo",
+      "Optimización de producción",
+      "Gestión de inventario"
+    ]
+  },
+  {
+    name: "Salud",
+    applications: [
+      "Diagnóstico asistido",
+      "Análisis de imágenes",
+      "Predicción de riesgos",
+      "Gestión de pacientes"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Soluciones de Inteligencia Artificial para Empresas" 
+  description={metaDescription}
+>
+  <Hero 
+    title="Inteligencia Artificial"
+    subtitle="Transformamos tu negocio con soluciones de IA que automatizan procesos y mejoran la toma de decisiones."
+  />
+  
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">IA que Impulsa tu Negocio</h2>
+          <p class="text-lg text-slate-700 mb-6">
+            La Inteligencia Artificial está transformando la manera en que las empresas operan y compiten en el mercado actual. En Meraki Developer, hacemos que esta tecnología sea accesible y práctica para tu negocio.
+          </p>
+          <p class="text-lg text-slate-700 mb-6">
+            Nuestras soluciones de IA te permiten:
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Automatizar tareas repetitivas</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Mejorar la experiencia del cliente</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Optimizar procesos operativos</span>
+            </li>
+          </ul>
+          <a href="/contacto" class="btn-primary">
+            Explorar Soluciones de IA
+          </a>
+        </div>
+        
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Inteligencia Artificial en acción" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-slate-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Beneficios de la IA</h2>
+        <p class="text-lg text-slate-700">
+          Descubre cómo la Inteligencia Artificial puede transformar tu negocio y darte una ventaja competitiva.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {benefits.map(benefit => (
+          <div class="bg-white p-6 rounded-xl shadow-md flex gap-4">
+            <div class="flex-shrink-0 bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+              <span class="text-primary-600" set:html={benefit.icon} />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p class="text-slate-600">{benefit.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Nuestras Soluciones de IA</h2>
+        <p class="text-lg text-slate-700">
+          Desarrollamos soluciones personalizadas que se adaptan a las necesidades específicas de tu negocio.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {solutions.map(solution => (
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4">{solution.title}</h3>
+            <p class="text-slate-600 mb-6">{solution.description}</p>
+            <ul class="space-y-3">
+              {solution.features.map(feature => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-slate-600">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-primary-900 text-white">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4 text-white">Aplicaciones por Industria</h2>
+        <p class="text-lg text-white opacity-90">
+          La IA puede transformar cualquier industria. Descubre cómo puede beneficiar específicamente a tu sector.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {industries.map(industry => (
+          <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-4 text-white">{industry.name}</h3>
+            <ul class="space-y-3">
+              {industry.applications.map(app => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-white opacity-90">{app}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <CtaSection
+    title="¿Listo para innovar con IA?"
+    subtitle="Agenda una consulta gratuita y descubre cómo la Inteligencia Artificial puede transformar tu negocio."
+    ctaText="Agendar Consulta"
+    ctaLink="/contacto"
+    bgColor="accent"
+  />
+</Layout>

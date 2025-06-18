@@ -1,0 +1,237 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import CtaSection from '../../components/CtaSection.astro';
+
+const metaDescription = "Desarrollo de aplicaciones móviles nativas y multiplataforma para empresas en California. Creamos apps intuitivas y escalables que mejoran la experiencia de tus usuarios.";
+
+const benefits = [
+  {
+    title: "Experiencia Personalizada",
+    description: "Apps diseñadas específicamente para tu marca y usuarios, mejorando la retención y satisfacción del cliente.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>'
+  },
+  {
+    title: "Notificaciones Push",
+    description: "Mantén a tus usuarios enganchados con notificaciones relevantes sobre ofertas, actualizaciones o información importante.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>'
+  },
+  {
+    title: "Acceso Offline",
+    description: "Funcionalidad incluso sin conexión a internet, permitiendo a tus usuarios acceder a información clave en cualquier momento.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>'
+  },
+  {
+    title: "Análisis en Tiempo Real",
+    description: "Monitorea el comportamiento de tus usuarios y obtén insights valiosos para mejorar continuamente tu aplicación.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>'
+  }
+];
+
+const platforms = [
+  {
+    name: "iOS Nativo",
+    description: "Apps optimizadas para iPhone y iPad usando Swift y SwiftUI, aprovechando al máximo las características de iOS.",
+    features: [
+      "Diseño siguiendo guías de Apple",
+      "Integración con servicios de iOS",
+      "Alto rendimiento nativo",
+      "Experiencia fluida"
+    ]
+  },
+  {
+    name: "Android Nativo",
+    description: "Aplicaciones Android desarrolladas con Kotlin y Jetpack Compose para máximo rendimiento y mejor experiencia.",
+    features: [
+      "Material Design 3",
+      "Soporte para múltiples dispositivos",
+      "Optimización de recursos",
+      "Integración con Google Play"
+    ]
+  },
+  {
+    name: "Multiplataforma",
+    description: "Soluciones cross-platform con React Native o Flutter para llegar a ambas plataformas con un solo desarrollo.",
+    features: [
+      "Desarrollo más rápido",
+      "Código base único",
+      "Actualizaciones simultáneas",
+      "Costos optimizados"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Desarrollo de Aplicaciones Móviles para Empresas en California" 
+  description={metaDescription}
+>
+  <Hero 
+    title="Desarrollo de Apps Móviles"
+    subtitle="Aplicaciones nativas y multiplataforma que transforman la manera en que tus usuarios interactúan con tu negocio."
+  />
+  
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">Apps que Impulsan tu Negocio</h2>
+          <p class="text-lg text-slate-700 mb-6">
+            En un mundo cada vez más móvil, tener una aplicación propia no es un lujo, es una necesidad estratégica para cualquier negocio que busque crecer en California.
+          </p>
+          <p class="text-lg text-slate-700 mb-6">
+            Desarrollamos aplicaciones móviles que:
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Mejoran la experiencia de tus clientes</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Aumentan la retención y fidelización</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Optimizan procesos internos</span>
+            </li>
+          </ul>
+          <a href="/contacto" class="btn-primary">
+            Solicitar Demostración
+          </a>
+        </div>
+        
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Desarrollo de aplicaciones móviles" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-slate-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Beneficios de Tener tu Propia App</h2>
+        <p class="text-lg text-slate-700">
+          Una aplicación móvil bien diseñada puede transformar la manera en que tus clientes interactúan con tu negocio.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {benefits.map(benefit => (
+          <div class="bg-white p-6 rounded-xl shadow-md flex gap-4">
+            <div class="flex-shrink-0 bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+              <span class="text-primary-600" set:html={benefit.icon} />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p class="text-slate-600">{benefit.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Plataformas y Tecnologías</h2>
+        <p class="text-lg text-slate-700">
+          Desarrollamos apps para todas las plataformas principales, eligiendo la mejor tecnología según tus necesidades.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {platforms.map(platform => (
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4">{platform.name}</h3>
+            <p class="text-slate-600 mb-6">{platform.description}</p>
+            <ul class="space-y-3">
+              {platform.features.map(feature => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-slate-600">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-primary-900 text-white">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Proceso de desarrollo de apps" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+        
+        <div>
+          <h2 class="mb-6 text-white">Nuestro Proceso de Desarrollo</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">1. Descubrimiento</h3>
+              <p class="text-white opacity-90">
+                Analizamos tu negocio y usuarios para definir las funcionalidades clave de tu app.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">2. Diseño UX/UI</h3>
+              <p class="text-white opacity-90">
+                Creamos interfaces intuitivas y atractivas siguiendo las últimas tendencias en diseño móvil.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">3. Desarrollo</h3>
+              <p class="text-white opacity-90">
+                Programamos tu app usando las mejores prácticas y tecnologías más adecuadas.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">4. Pruebas</h3>
+              <p class="text-white opacity-90">
+                Realizamos pruebas exhaustivas para garantizar calidad y rendimiento óptimo.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">5. Publicación y Mantenimiento</h3>
+              <p class="text-white opacity-90">
+                Gestionamos la publicación en las tiendas y ofrecemos soporte continuo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <CtaSection
+    title="¿Listo para crear tu app?"
+    subtitle="Agenda una consulta gratuita y descubre cómo una aplicación móvil puede transformar tu negocio."
+    ctaText="Agendar Consulta"
+    ctaLink="/contacto"
+    bgColor="accent"
+  />
+</Layout>

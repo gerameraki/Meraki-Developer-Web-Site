@@ -1,0 +1,37 @@
+---
+interface Props {
+  quote: string;
+  author: string;
+  company: string;
+  image?: string;
+}
+
+const { 
+  quote, 
+  author, 
+  company, 
+  image = "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+} = Astro.props;
+---
+
+<div class="bg-white rounded-xl shadow-md p-6 md:p-8 relative">
+  <div class="absolute top-6 left-6 text-5xl text-primary-200">"</div>
+  <div class="relative z-10">
+    <p class="text-slate-700 mb-6 relative z-10">{quote}</p>
+    <div class="flex items-center">
+      {image && (
+        <div class="mr-4">
+          <img 
+            src={image} 
+            alt={author}
+            class="w-12 h-12 rounded-full object-cover"
+          />
+        </div>
+      )}
+      <div>
+        <h4 class="font-bold text-lg">{author}</h4>
+        <p class="text-sm text-slate-500">{company}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,251 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import CtaSection from '../../components/CtaSection.astro';
+
+const metaDescription = "Servicios de análisis de datos para empresas en California. Transformamos datos en insights accionables con dashboards interactivos y reportes ejecutivos personalizados.";
+
+const benefits = [
+  {
+    title: "Decisiones Informadas",
+    description: "Toma decisiones estratégicas basadas en datos reales y análisis profundo de tu negocio.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>'
+  },
+  {
+    title: "Visualización Clara",
+    description: "Dashboards interactivos que presentan información compleja de manera clara y accionable.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>'
+  },
+  {
+    title: "Automatización de Reportes",
+    description: "Generación automática de informes personalizados para diferentes niveles de la organización.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>'
+  },
+  {
+    title: "Insights Predictivos",
+    description: "Anticipación de tendencias y comportamientos futuros basados en análisis histórico.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>'
+  }
+];
+
+const services = [
+  {
+    title: "Dashboards Interactivos",
+    description: "Visualizaciones dinámicas que permiten explorar datos en tiempo real.",
+    features: [
+      "Métricas en tiempo real",
+      "Filtros interactivos",
+      "Visualizaciones personalizadas",
+      "Acceso multiplataforma"
+    ]
+  },
+  {
+    title: "Análisis Predictivo",
+    description: "Modelos que anticipan tendencias y comportamientos futuros.",
+    features: [
+      "Pronóstico de ventas",
+      "Análisis de tendencias",
+      "Segmentación de clientes",
+      "Detección de anomalías"
+    ]
+  },
+  {
+    title: "Reportes Ejecutivos",
+    description: "Informes claros y concisos para toma de decisiones estratégicas.",
+    features: [
+      "KPIs principales",
+      "Resúmenes ejecutivos",
+      "Recomendaciones accionables",
+      "Automatización periódica"
+    ]
+  }
+];
+
+const tools = [
+  {
+    name: "Herramientas de Visualización",
+    examples: [
+      "Power BI",
+      "Tableau",
+      "Looker",
+      "Custom Dashboards"
+    ]
+  },
+  {
+    name: "Análisis Estadístico",
+    examples: [
+      "Python",
+      "R",
+      "SQL Avanzado",
+      "Jupyter Notebooks"
+    ]
+  },
+  {
+    name: "Big Data",
+    examples: [
+      "Apache Spark",
+      "Hadoop",
+      "MongoDB",
+      "Amazon Redshift"
+    ]
+  },
+  {
+    name: "Machine Learning",
+    examples: [
+      "Scikit-learn",
+      "TensorFlow",
+      "Prophet",
+      "XGBoost"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Análisis de Datos para Empresas en California" 
+  description={metaDescription}
+>
+  <Hero 
+    title="Análisis de Datos"
+    subtitle="Transformamos tus datos en insights accionables que impulsan el crecimiento y la eficiencia de tu negocio."
+  />
+  
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">Datos que Impulsan Decisiones</h2>
+          <p class="text-lg text-slate-700 mb-6">
+            En la era digital, los datos son el activo más valioso de tu empresa. Nuestro equipo de analistas expertos te ayuda a extraer insights significativos que impulsan el crecimiento y la eficiencia operativa.
+          </p>
+          <p class="text-lg text-slate-700 mb-6">
+            Transformamos tus datos para:
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Mejorar la toma de decisiones</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Optimizar operaciones</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Identificar oportunidades</span>
+            </li>
+          </ul>
+          <a href="/contacto" class="btn-primary">
+            Solicitar Análisis
+          </a>
+        </div>
+        
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Análisis de datos en acción" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-slate-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Beneficios del Análisis de Datos</h2>
+        <p class="text-lg text-slate-700">
+          Descubre cómo el análisis profesional de datos puede transformar tu negocio y mejorar tus resultados.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {benefits.map(benefit => (
+          <div class="bg-white p-6 rounded-xl shadow-md flex gap-4">
+            <div class="flex-shrink-0 bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+              <span class="text-primary-600" set:html={benefit.icon} />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p class="text-slate-600">{benefit.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Nuestros Servicios de Análisis</h2>
+        <p class="text-lg text-slate-700">
+          Ofrecemos soluciones completas de análisis de datos adaptadas a las necesidades de tu negocio.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {services.map(service => (
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4">{service.title}</h3>
+            <p class="text-slate-600 mb-6">{service.description}</p>
+            <ul class="space-y-3">
+              {service.features.map(feature => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-slate-600">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-primary-900 text-white">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4 text-white">Herramientas y Tecnologías</h2>
+        <p class="text-lg text-white opacity-90">
+          Utilizamos las herramientas más avanzadas para extraer el máximo valor de tus datos.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {tools.map(tool => (
+          <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-4 text-white">{tool.name}</h3>
+            <ul class="space-y-3">
+              {tool.examples.map(example => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-white opacity-90">{example}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <CtaSection
+    title="¿Listo para aprovechar tus datos?"
+    subtitle="Agenda una consulta gratuita y descubre cómo el análisis de datos puede transformar tu negocio."
+    ctaText="Agendar Consulta"
+    ctaLink="/contacto"
+    bgColor="accent"
+  />
+</Layout>

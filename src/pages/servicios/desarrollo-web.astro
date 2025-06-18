@@ -1,0 +1,233 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import CtaSection from '../../components/CtaSection.astro';
+
+const metaDescription = "Desarrollo de sitios web profesionales y optimizados para empresas en California. Creamos páginas web rápidas, responsivas y orientadas a SEO que generan resultados.";
+
+const benefits = [
+  {
+    title: "Diseño Responsivo",
+    description: "Tu sitio se verá y funcionará perfectamente en cualquier dispositivo, desde smartphones hasta computadoras de escritorio.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>'
+  },
+  {
+    title: "Optimización SEO",
+    description: "Implementamos las mejores prácticas de SEO técnico para mejorar tu visibilidad en Google y atraer más clientes potenciales.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>'
+  },
+  {
+    title: "Velocidad Óptima",
+    description: "Sitios web ultrarrápidos que cargan en milisegundos, mejorando la experiencia del usuario y el ranking en buscadores.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>'
+  },
+  {
+    title: "Conversión Enfocada",
+    description: "Diseño estratégico que guía a tus visitantes hacia acciones específicas, aumentando las conversiones y ventas.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>'
+  }
+];
+
+const features = [
+  {
+    title: "Tecnologías Modernas",
+    items: [
+      "Astro JS para rendimiento excepcional",
+      "Tailwind CSS para diseños modernos y responsivos",
+      "Next.js y React para aplicaciones web dinámicas",
+      "WordPress para sitios con CMS robusto"
+    ]
+  },
+  {
+    title: "Optimización Completa",
+    items: [
+      "Estructura SEO técnicamente perfecta",
+      "Tiempo de carga ultrarrápido",
+      "Accesibilidad WCAG 2.1",
+      "SSL y seguridad avanzada"
+    ]
+  },
+  {
+    title: "Funcionalidades Avanzadas",
+    items: [
+      "Integración con CRM y herramientas de marketing",
+      "Analytics y seguimiento de conversiones",
+      "Formularios y sistemas de contacto",
+      "Multilenguaje y geolocalización"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Desarrollo Web Profesional para Empresas en California" 
+  description={metaDescription}
+>
+  <Hero 
+    title="Desarrollo Web Profesional"
+    subtitle="Sitios web optimizados que atraen clientes y generan resultados para tu negocio en California."
+  />
+  
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">Sitios Web que Impulsan tu Negocio</h2>
+          <p class="text-lg text-slate-700 mb-6">
+            En el competitivo mercado de California, tu sitio web es más que una presencia digital: es tu vendedor 24/7, tu primera impresión y tu ventaja competitiva.
+          </p>
+          <p class="text-lg text-slate-700 mb-6">
+            Desarrollamos sitios web profesionales que no solo se ven increíbles, sino que están optimizados para:
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Atraer más clientes desde Google</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Convertir visitantes en clientes</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Destacar sobre tu competencia</span>
+            </li>
+          </ul>
+          <a href="/contacto" class="btn-primary">
+            Solicitar Cotización Gratuita
+          </a>
+        </div>
+        
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Desarrollo web profesional" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-slate-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Beneficios de Nuestro Desarrollo Web</h2>
+        <p class="text-lg text-slate-700">
+          Creamos sitios web que no solo se ven profesionales, sino que están diseñados estratégicamente para generar resultados.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {benefits.map(benefit => (
+          <div class="bg-white p-6 rounded-xl shadow-md flex gap-4">
+            <div class="flex-shrink-0 bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+              <span class="text-primary-600" set:html={benefit.icon} />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p class="text-slate-600">{benefit.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Características Técnicas</h2>
+        <p class="text-lg text-slate-700">
+          Utilizamos las últimas tecnologías y mejores prácticas para crear sitios web de alto rendimiento.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {features.map(feature => (
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4">{feature.title}</h3>
+            <ul class="space-y-3">
+              {feature.items.map(item => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-slate-600">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-primary-900 text-white">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Proceso de desarrollo web" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+        
+        <div>
+          <h2 class="mb-6 text-white">Nuestro Proceso de Desarrollo</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">1. Análisis y Planificación</h3>
+              <p class="text-white opacity-90">
+                Estudiamos tu negocio, competencia y objetivos para crear una estrategia digital efectiva.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">2. Diseño UX/UI</h3>
+              <p class="text-white opacity-90">
+                Creamos wireframes y diseños que optimizan la experiencia del usuario y las conversiones.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">3. Desarrollo</h3>
+              <p class="text-white opacity-90">
+                Programamos tu sitio usando las últimas tecnologías para garantizar rendimiento y escalabilidad.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">4. Optimización</h3>
+              <p class="text-white opacity-90">
+                Implementamos SEO técnico y optimizamos la velocidad para mejorar tu ranking en Google.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">5. Lanzamiento y Soporte</h3>
+              <p class="text-white opacity-90">
+                Desplegamos tu sitio y ofrecemos soporte continuo para mantenerlo actualizado y seguro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <CtaSection
+    title="¿Listo para destacar en línea?"
+    subtitle="Agenda una consulta gratuita y descubre cómo podemos crear el sitio web perfecto para tu negocio."
+    ctaText="Agendar Consulta"
+    ctaLink="/contacto"
+    bgColor="accent"
+  />
+</Layout>

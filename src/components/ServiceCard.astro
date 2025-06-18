@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  url: string;
+}
+
+const { title, description, icon, url } = Astro.props;
+---
+
+<div class="service-card group">
+  <div class="rounded-full bg-primary-100 w-16 h-16 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-primary-200">
+    <span class="text-primary-600" set:html={icon} />
+  </div>
+  <h3 class="text-xl font-bold mb-3">{title}</h3>
+  <p class="text-slate-600 mb-6 flex-grow">{description}</p>
+  <a href={url} class="inline-flex items-center font-medium text-primary-600 hover:text-primary-700 group-hover:underline">
+    Conocer más
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+    </svg>
+  </a>
+</div>

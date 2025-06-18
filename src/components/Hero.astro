@@ -1,0 +1,68 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  ctaText?: string;
+  ctaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  image?: string;
+  isHomepage?: boolean;
+}
+
+const { 
+  title, 
+  subtitle, 
+  ctaText = "Contáctanos",
+  ctaLink = "/contacto",
+  secondaryCtaText,
+  secondaryCtaLink,
+  image = "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  isHomepage = false
+} = Astro.props;
+---
+
+<section class={`relative overflow-hidden ${isHomepage ? 'py-20 md:py-32' : 'py-16 md:py-24'}`}>
+  {isHomepage && (
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={image} 
+        alt="Hero background" 
+        class="w-full h-full object-cover opacity-20"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-white/60 to-white"></div>
+    </div>
+  )}
+  
+  <div class="container relative z-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="animate-fade-in">
+        {title}
+      </h1>
+      <p class="text-xl md:text-2xl text-slate-700 mt-6 mb-8 animate-fade-in" style="animation-delay: 0.2s;">
+        {subtitle}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style="animation-delay: 0.4s;">
+        <a href={ctaLink} class="btn-primary">{ctaText}</a>
+        {secondaryCtaText && secondaryCtaLink && (
+          <a href={secondaryCtaLink} class="btn-outline">{secondaryCtaText}</a>
+        )}
+      </div>
+    </div>
+  </div>
+  
+  {isHomepage && (
+    <div class="absolute bottom-0 left-0 right-0 flex justify-center">
+      <a 
+        href="#servicios" 
+        class="animate-bounce flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-lg mb-4"
+        aria-label="Scroll down"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </div>
+  )}
+</section>

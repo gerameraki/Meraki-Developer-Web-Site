@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  ctaText: string;
+  ctaLink: string;
+  bgColor?: "primary" | "accent" | "white";
+}
+
+const { title, subtitle, ctaText, ctaLink, bgColor = "primary" } = Astro.props;
+
+const bgClasses = {
+  primary: "bg-primary-900 text-white",
+  accent: "bg-accent-500 text-white",
+  white: "bg-white text-slate-900",
+};
+
+const btnClasses = {
+  primary: "bg-white text-primary-900 hover:bg-slate-100",
+  accent: "bg-white text-accent-700 hover:bg-slate-100",
+  white: "bg-primary-600 text-white hover:bg-primary-700",
+};
+---
+
+<section class={`py-16 ${bgClasses[bgColor]}`}>
+  <div class="container">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="mb-4 text-black">{title}</h2>
+      {subtitle && <p class="text-lg mb-8 opacity-90">{subtitle}</p>}
+      <a
+        href={ctaLink}
+        class={`btn inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg transition-colors duration-200 ${btnClasses[bgColor]}`}
+      >
+        {ctaText}
+      </a>
+    </div>
+  </div>
+</section>

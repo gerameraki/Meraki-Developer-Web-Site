@@ -1,0 +1,207 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import CtaSectionBlack from "../components/CtaSectionBlack.astro";
+
+const team = [
+  {
+    name: "Gerardo Martínez",
+    role: "Fundador & CEO",
+    bio: "Experto en desarrollo de software y tecnologías emergentes con más de 10 años de experiencia. Lidera la visión estratégica y tecnológica de Meraki Developer.",
+    image:
+      "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    name: "Héctor Romero",
+    role: "Co-fundador & CTO",
+    bio: "Especialista en arquitectura de software y soluciones de IA con amplia experiencia en proyectos para empresas en Estados Unidos y Latinoamérica.",
+    image:
+      "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    name: "Ana Gómez",
+    role: "Lead Designer",
+    bio: "Creativa y meticulosa, con un enfoque centrado en el usuario. Experta en diseño UX/UI y experiencia en marcas reconocidas internacionalmente.",
+    image:
+      "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    name: "Miguel Hernández",
+    role: "Lead Developer",
+    bio: "Desarrollador full-stack con amplia experiencia en tecnologías web y móviles. Especialista en optimización de rendimiento y arquitecturas escalables.",
+    image:
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+];
+
+const values = [
+  {
+    title: "Excelencia",
+    description:
+      "Nos esforzamos por superar expectativas en cada proyecto, buscando la perfección en cada línea de código y aspecto de diseño.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>',
+  },
+  {
+    title: "Innovación",
+    description:
+      "Adoptamos nuevas tecnologías y metodologías para ofrecer soluciones vanguardistas que dan ventaja competitiva a nuestros clientes.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>',
+  },
+  {
+    title: "Colaboración",
+    description:
+      "Trabajamos estrechamente con nuestros clientes, convirtiéndonos en socios estratégicos comprometidos con su éxito a largo plazo.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>',
+  },
+  {
+    title: "Integridad",
+    description:
+      "Actuamos con honestidad y transparencia en cada interacción, construyendo relaciones de confianza con clientes y colaboradores.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>',
+  },
+];
+
+const metaDescription =
+  "Conoce a Meraki Developer, una empresa de desarrollo de software fundada en 2015 en Tijuana que ofrece soluciones digitales personalizadas para empresas en California.";
+---
+
+<Layout title="Sobre Nosotros - Meraki Developer" description={metaDescription}>
+  <Hero
+    title="Sobre Nosotros"
+    subtitle="Conoce a Meraki Developer, el equipo detrás de las soluciones que transforman negocios en California."
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">Nuestra Historia</h2>
+          <p class="text-lg text-slate-700 mb-6">
+            Fundada en 2015 por Gerardo Martínez y Héctor Romero, Meraki
+            Developer nació con la misión de ofrecer soluciones tecnológicas
+            personalizadas que realmente impacten el crecimiento y la eficiencia
+            de los negocios.
+          </p>
+          <p class="text-lg text-slate-700 mb-6">
+            El nombre "Meraki" proviene del griego y significa "hacer algo con
+            amor, creatividad y alma", reflejando nuestra filosofía de poner
+            pasión y dedicación en cada proyecto que desarrollamos.
+          </p>
+          <p class="text-lg text-slate-700">
+            Desde nuestras oficinas en Tijuana, hemos crecido hasta convertirnos
+            en un socio tecnológico de confianza para empresas y emprendedores
+            en California, ofreciendo servicios que van desde el desarrollo de
+            software a medida hasta soluciones de inteligencia artificial y
+            análisis de datos.
+          </p>
+        </div>
+
+        <div class="hidden lg:block">
+          <img
+            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Equipo de Meraki Developer en oficina"
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-slate-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Nuestros Valores</h2>
+        <p class="text-lg text-slate-700">
+          Estos principios guían nuestras decisiones y definen nuestra cultura
+          empresarial.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {
+          values.map((value) => (
+            <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+              <div class="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <span class="text-primary-600" set:html={value.icon} />
+              </div>
+              <h3 class="text-xl font-bold mb-3">{value.title}</h3>
+              <p class="text-slate-600">{value.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <!--
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Nuestro Equipo</h2>
+        <p class="text-lg text-slate-700">
+          Un grupo multidisciplinario de profesionales apasionados por la
+          tecnología y comprometidos con la excelencia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {
+          team.map((member) => (
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group">
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-1">{member.name}</h3>
+                <p class="text-primary-600 font-medium mb-4">{member.role}</p>
+                <p class="text-slate-600">{member.bio}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+-->
+  <section class="section bg-primary-900 text-white">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="hidden lg:block">
+          <img
+            src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Meraki Developer oficina"
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+
+        <div>
+          <h2 class="mb-6 text-white">Nuestra Misión</h2>
+          <p class="text-lg opacity-90 mb-8">
+            Transformar negocios a través de soluciones tecnológicas
+            innovadoras, desarrolladas con excelencia técnica y enfocadas en
+            generar valor real para nuestros clientes.
+          </p>
+
+          <h2 class="mb-6 text-white">Nuestra Visión</h2>
+          <p class="text-lg opacity-90">
+            Ser reconocidos como el socio tecnológico de referencia para
+            empresas en California, destacando por nuestra capacidad de crear
+            soluciones que impulsen el crecimiento y la transformación digital
+            de nuestros clientes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaSectionBlack
+    title="¿Quieres formar parte de nuestro equipo?"
+    subtitle="Estamos en constante búsqueda de talento para seguir creciendo y ofreciendo soluciones innovadoras."
+    ctaText="Mandar mi CV"
+    ctaLink="mailto:gerardo@merakideveloper.com"
+    bgColor="white"
+  />
+</Layout>

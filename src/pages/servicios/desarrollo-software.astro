@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import CtaSection from '../../components/CtaSection.astro';
+
+const metaDescription = "Desarrollo de software a medida para empresas en California. Automatizamos procesos, creamos dashboards y sistemas de gestión que optimizan la operación de tu negocio.";
+
+const benefits = [
+  {
+    title: "Soluciones Personalizadas",
+    description: "Software diseñado específicamente para tus procesos y necesidades únicas, evitando las limitaciones de soluciones genéricas.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>'
+  },
+  {
+    title: "Automatización de Procesos",
+    description: "Reducción de tareas manuales y repetitivas, minimizando errores y liberando tiempo para actividades de mayor valor.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>'
+  },
+  {
+    title: "Integración Completa",
+    description: "Conexión fluida con tus sistemas existentes y herramientas de terceros, creando un ecosistema digital cohesivo.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>'
+  },
+  {
+    title: "Escalabilidad",
+    description: "Arquitectura diseñada para crecer con tu negocio, adaptándose a cambios y nuevos requerimientos sin reconstruir desde cero.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>'
+  }
+];
+
+const process = [
+  {
+    title: "Análisis de Procesos",
+    description: "Estudiamos detalladamente tu operación actual para identificar oportunidades de optimización y automatización."
+  },
+  {
+    title: "Diseño de Solución",
+    description: "Creamos la arquitectura y diseño técnico considerando tus objetivos, presupuesto y plazos."
+  },
+  {
+    title: "Desarrollo Ágil",
+    description: "Construimos la solución en ciclos iterativos, permitiéndote ver y probar avances constantemente."
+  },
+  {
+    title: "Implementación y Capacitación",
+    description: "Desplegamos el software y capacitamos a tu equipo para maximizar su aprovechamiento."
+  },
+  {
+    title: "Soporte Continuo",
+    description: "Ofrecemos mantenimiento y soporte técnico para asegurar el funcionamiento óptimo de tu solución."
+  }
+];
+---
+
+<Layout 
+  title="Desarrollo de Software a Medida para Empresas en California" 
+  description={metaDescription}
+>
+  <Hero 
+    title="Desarrollo de Software a Medida"
+    subtitle="Soluciones personalizadas que automatizan procesos, optimizan operaciones y potencian el crecimiento de tu empresa en California."
+  />
+  
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">Transformamos tu Operación con Software a Medida</h2>
+          <p class="text-lg text-slate-700 mb-6">
+            En Meraki Developer, diseñamos y desarrollamos soluciones de software personalizadas que se adaptan perfectamente a tus procesos empresariales, automatizando tareas, centralizando información y potenciando la toma de decisiones.
+          </p>
+          <p class="text-lg text-slate-700 mb-6">
+            Nuestro enfoque se centra en entender profundamente tu negocio para crear sistemas que realmente resuelvan tus desafíos específicos, a diferencia de las soluciones genéricas que pueden no ajustarse a tus necesidades únicas.
+          </p>
+          <p class="text-lg text-slate-700">
+            Ya sea que necesites un sistema de gestión interno, una plataforma para administrar clientes, o la automatización de procesos críticos, tenemos la experiencia para desarrollar la solución ideal para tu empresa en California.
+          </p>
+        </div>
+        
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/3182774/pexels-photo-3182774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Equipo desarrollando software personalizado" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-slate-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Beneficios del Desarrollo a Medida</h2>
+        <p class="text-lg text-slate-700">
+          El software personalizado ofrece ventajas significativas frente a soluciones genéricas, permitiéndote optimizar recursos y potenciar resultados.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {benefits.map(benefit => (
+          <div class="bg-white p-6 rounded-xl shadow-md flex gap-4">
+            <div class="flex-shrink-0 bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+              <span class="text-primary-600" set:html={benefit.icon} />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p class="text-slate-600">{benefit.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Nuestro Proceso de Desarrollo</h2>
+        <p class="text-lg text-slate-700">
+          Metodología estructurada que garantiza resultados de calidad, dentro del presupuesto y en los plazos acordados.
+        </p>
+      </div>
+      
+      <div class="relative">
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200 hidden md:block"></div>
+        
+        <div class="space-y-12">
+          {process.map((step, index) => (
+            <div class="relative flex items-start md:items-center gap-8">
+              <div class="hidden md:flex items-center justify-center flex-shrink-0">
+                <div class="bg-primary-600 text-white rounded-full w-12 h-12 flex items-center justify-center z-10">
+                  {index + 1}
+                </div>
+              </div>
+              
+              <div class={`bg-white p-6 rounded-xl shadow-md md:w-1/2 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
+                <h3 class="text-xl font-bold mb-2">{step.title}</h3>
+                <p class="text-slate-600">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-primary-900 text-white">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6 text-white">Industrias que Atendemos</h2>
+          <p class="text-lg text-white opacity-90 mb-6">
+            Desarrollamos soluciones para diversas industrias en California, adaptándonos a las necesidades específicas de cada sector:
+          </p>
+          
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-xl text-white">Retail y E-commerce</h3>
+                <p class="text-white opacity-90">Sistemas de inventario, plataformas de venta online y gestión de clientes.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-xl text-white">Servicios Profesionales</h3>
+                <p class="text-white opacity-90">Gestión de proyectos, facturación y seguimiento de clientes.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-xl text-white">Salud y Bienestar</h3>
+                <p class="text-white opacity-90">Sistemas de gestión de pacientes, agendamiento y telemedicina.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-xl text-white">Manufactura y Logística</h3>
+                <p class="text-white opacity-90">Control de producción, gestión de almacenes y seguimiento de envíos.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/1181376/pexels-photo-1181376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Profesionales utilizando software personalizado" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <CtaSection
+    title="¿Listo para optimizar tu operación?"
+    subtitle="Agenda una consulta gratuita para analizar tus necesidades y diseñar la solución ideal para tu empresa."
+    ctaText="Agendar Consulta"
+    ctaLink="/contacto"
+    bgColor="accent"
+  />
+</Layout>

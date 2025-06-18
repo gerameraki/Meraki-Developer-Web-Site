@@ -1,0 +1,251 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import CtaSection from '../../components/CtaSection.astro';
+
+const metaDescription = "Soluciones de Machine Learning para empresas en California. Implementamos modelos predictivos, sistemas de recomendación y análisis avanzado de datos para optimizar tu negocio.";
+
+const benefits = [
+  {
+    title: "Predicción Precisa",
+    description: "Anticipa tendencias y comportamientos con modelos predictivos basados en datos históricos.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>'
+  },
+  {
+    title: "Automatización Inteligente",
+    description: "Automatiza procesos complejos con sistemas que aprenden y mejoran con el tiempo.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>'
+  },
+  {
+    title: "Segmentación Avanzada",
+    description: "Identifica patrones y segmenta clientes para estrategias más efectivas.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>'
+  },
+  {
+    title: "Optimización Continua",
+    description: "Mejora constante de procesos y resultados mediante aprendizaje automático.",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>'
+  }
+];
+
+const solutions = [
+  {
+    title: "Modelos Predictivos",
+    description: "Anticipamos comportamientos y tendencias para tomar mejores decisiones.",
+    features: [
+      "Predicción de ventas",
+      "Análisis de riesgo",
+      "Pronóstico de demanda",
+      "Detección de anomalías"
+    ]
+  },
+  {
+    title: "Sistemas de Recomendación",
+    description: "Personalizamos la experiencia de cada usuario en tiempo real.",
+    features: [
+      "Recomendaciones de productos",
+      "Contenido personalizado",
+      "Cross-selling inteligente",
+      "Optimización de ofertas"
+    ]
+  },
+  {
+    title: "Análisis de Texto",
+    description: "Extraemos insights valiosos de datos no estructurados.",
+    features: [
+      "Análisis de sentimientos",
+      "Clasificación de documentos",
+      "Extracción de información",
+      "Procesamiento de lenguaje"
+    ]
+  }
+];
+
+const applications = [
+  {
+    title: "Retail y E-commerce",
+    examples: [
+      "Predicción de inventario",
+      "Personalización de ofertas",
+      "Análisis de comportamiento",
+      "Optimización de precios"
+    ]
+  },
+  {
+    title: "Servicios Financieros",
+    examples: [
+      "Detección de fraude",
+      "Evaluación de riesgos",
+      "Trading algorítmico",
+      "Scoring crediticio"
+    ]
+  },
+  {
+    title: "Manufactura",
+    examples: [
+      "Control de calidad",
+      "Mantenimiento predictivo",
+      "Optimización de producción",
+      "Gestión de inventario"
+    ]
+  },
+  {
+    title: "Marketing Digital",
+    examples: [
+      "Segmentación de clientes",
+      "Optimización de campañas",
+      "Predicción de conversiones",
+      "Análisis de ROI"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Machine Learning para Empresas en California" 
+  description={metaDescription}
+>
+  <Hero 
+    title="Machine Learning"
+    subtitle="Potencia tu negocio con modelos de aprendizaje automático que optimizan procesos y mejoran la toma de decisiones."
+  />
+  
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">Machine Learning que Transforma tu Negocio</h2>
+          <p class="text-lg text-slate-700 mb-6">
+            El Machine Learning va más allá de la automatización básica: permite a tu negocio aprender de los datos y mejorar continuamente sus operaciones y decisiones.
+          </p>
+          <p class="text-lg text-slate-700 mb-6">
+            Nuestras soluciones de ML te permiten:
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Predecir tendencias y comportamientos</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Optimizar procesos automáticamente</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Tomar decisiones basadas en datos</span>
+            </li>
+          </ul>
+          <a href="/contacto" class="btn-primary">
+            Explorar Soluciones de ML
+          </a>
+        </div>
+        
+        <div class="hidden lg:block">
+          <img 
+            src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Machine Learning en acción" 
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-slate-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Beneficios del Machine Learning</h2>
+        <p class="text-lg text-slate-700">
+          Descubre cómo el ML puede transformar tu negocio y darte una ventaja competitiva sostenible.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {benefits.map(benefit => (
+          <div class="bg-white p-6 rounded-xl shadow-md flex gap-4">
+            <div class="flex-shrink-0 bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center">
+              <span class="text-primary-600" set:html={benefit.icon} />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p class="text-slate-600">{benefit.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Nuestras Soluciones de ML</h2>
+        <p class="text-lg text-slate-700">
+          Implementamos soluciones de Machine Learning adaptadas a las necesidades específicas de tu negocio.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {solutions.map(solution => (
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4">{solution.title}</h3>
+            <p class="text-slate-600 mb-6">{solution.description}</p>
+            <ul class="space-y-3">
+              {solution.features.map(feature => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-slate-600">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-primary-900 text-white">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4 text-white">Aplicaciones por Industria</h2>
+        <p class="text-lg text-white opacity-90">
+          El Machine Learning puede transformar cualquier industria. Descubre cómo puede beneficiar a tu sector.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {applications.map(app => (
+          <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-4 text-white">{app.title}</h3>
+            <ul class="space-y-3">
+              {app.examples.map(example => (
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-white opacity-90">{example}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <CtaSection
+    title="¿Listo para potenciar tu negocio con ML?"
+    subtitle="Agenda una consulta gratuita y descubre cómo el Machine Learning puede transformar tu operación."
+    ctaText="Agendar Consulta"
+    ctaLink="/contacto"
+    bgColor="accent"
+  />
+</Layout>
