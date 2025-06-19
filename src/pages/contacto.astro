@@ -269,46 +269,10 @@ const metaDescription =
   </section>
 </Layout>
 
-<script>
+<script type="module">
+  import { initContactForm } from "../scripts/contact-form";
+
   document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-
-    if (form) {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        // Normalmente aquí enviarías los datos a un endpoint
-        // Por ahora, mostraremos un mensaje de éxito simulado
-
-        const formElements = form.elements;
-        for (let i = 0; i < formElements.length; i++) {
-          const element = formElements[i];
-          if (element.type !== "submit") {
-            element.disabled = true;
-          }
-        }
-
-        const submitButton = form.querySelector('button[type="submit"]');
-        if (submitButton) {
-          submitButton.innerHTML = "Enviando...";
-
-          // Simular envío
-          setTimeout(() => {
-            form.innerHTML = `
-              <div class="text-center py-8">
-                <div class="bg-green-100 text-green-800 p-4 rounded-lg mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <h3 class="text-xl font-bold mb-2">¡Mensaje Enviado!</h3>
-                  <p>Gracias por contactarnos. Nos pondremos en contacto contigo en menos de 24 horas.</p>
-                </div>
-                <a href="/" class="btn-primary">Volver al Inicio</a>
-              </div>
-            `;
-          }, 1500);
-        }
-      });
-    }
+    initContactForm();
   });
 </script>
